@@ -42,8 +42,11 @@ Puedes descargar e instalar directamente la aplicación en tu celular Android de
 
 ```text
 hitster-app/
-├── cartas/                 # Información y plantillas de las cartas físicas imprimibles
-│   └── README.md
+├── cartas/                 # Cartas físicas listas para imprimir (203 canciones con QR)
+│   ├── Cartas_Chilster_Parte1_Canciones_1_a_105.docx
+│   ├── Cartas_Chilster_Parte2_Canciones_106_a_203.docx
+│   ├── LISTA_CANCIONES.md  # Índice completo de canciones
+│   └── README.md           # Guía de impresión y armado
 ├── assets/                 # Iconos, splash screen y recursos gráficos
 │   └── images/
 ├── src/
@@ -98,9 +101,14 @@ eas build -p android --profile preview
 
 ---
 
-## 🎴 Cartas Imprimibles
+## 🎴 Cartas Imprimibles (203 Canciones Chilenas)
 
-Las cartas para imprimir y jugar físicamente están detalladas en la carpeta [`cartas/`](./cartas/README.md).
+El juego incluye **203 cartas listas para imprimir** con sus códigos QR de Spotify generados y listados:
+
+* 📄 **[Cartas Parte 1 (Canciones 1 a 105)](./cartas/Cartas_Chilster_Parte1_Canciones_1_a_105.docx)** (.docx listo para imprimir)
+* 📄 **[Cartas Parte 2 (Canciones 106 a 203)](./cartas/Cartas_Chilster_Parte2_Canciones_106_a_203.docx)** (.docx listo para imprimir)
+* 📋 **[Ver Lista Completa de Canciones](./cartas/LISTA_CANCIONES.md)** (Violeta Parra, Los Prisioneros, Los Jaivas, Los Bunkers, Mon Laferte, Polimá Westcoast, Pailita, etc.)
+* 🛠️ Instrucciones de corte y armado en [`cartas/README.md`](./cartas/README.md).
 
 ---
 
