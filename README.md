@@ -6,6 +6,18 @@ Inspirado en la mecánica del popular juego de mesa **Hitster**, **Chilster** ad
 
 ---
 
+## 📲 Descargar App para Android (APK v1.0.0)
+
+Puedes descargar e instalar directamente la aplicación en tu celular Android desde los lanzamientos oficiales:
+
+👉 **[Descargar Chilster v1.0.0 (APK)](https://github.com/Renvto21/chilster/releases/latest)**
+
+* **Versión:** `v1.0.0`
+* **Archivo:** `Chilster-v1.0.0.apk`
+* **Instalación:** Descarga el archivo en tu dispositivo Android y ejecútalo para instalar (si el sistema lo solicita, habilita la opción de "Instalar aplicaciones desconocidas").
+
+---
+
 ## 🎯 ¿Cómo se juega?
 
 1. **Roba una carta:** Toma una carta física del mazo. En el frente está el nombre del tema, el artista y el año de lanzamiento (que nadie debe ver). En el reverso hay un código QR de Spotify.
