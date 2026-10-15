@@ -1,56 +1,97 @@
-# Welcome to your Expo app 👋
+# Chilster 🇨🇱 (Hitster Chileno)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> **El juego de cartas y música chilena donde escuchas, recuerdas y ordenas las canciones en tu línea de tiempo musical.**
 
-## Get started
+Inspirado en la mecánica del popular juego de mesa **Hitster**, **Chilster** adapta toda la experiencia al cancionero popular chileno (rock, cumbia, pop, folklore, nueva ola, rap y más). Los jugadores compiten por armar su línea de tiempo cronológica adivinando en qué año se lanzaron los grandes éxitos de la música nacional.
 
-1. Install dependencies
+---
 
+## 🎯 ¿Cómo se juega?
+
+1. **Roba una carta:** Toma una carta física del mazo. En el frente está el nombre del tema, el artista y el año de lanzamiento (que nadie debe ver). En el reverso hay un código QR de Spotify.
+2. **Escanea con Chilster:** Abre la aplicación y apunta con la cámara al código QR de la carta.
+3. **Pon el teléfono boca abajo:** La app cargará la canción en segundo plano y te indicará: *"¡Canción lista! Pon el teléfono boca abajo"*.
+4. **Música automática:** Gracias al acelerómetro del teléfono, al ponerlo boca abajo sobre la mesa, la música comienza a reproducirse sola. Así ningún jugador puede espiar la pantalla ni ver el título del tema.
+5. **Adivina y desafía:** Los jugadores escuchan el tema y deciden en qué posición de su línea de tiempo cronológica colocar la carta. Al voltear la carta física, se comprueba el año.
+
+---
+
+## ✨ Características Técnicas
+
+* 📱 **Desarrollado en React Native y Expo** (TypeScript).
+* 📷 **Escáner QR focalizado (`expo-camera`):** Retícula de escaneo optimizada con validación inmediata de enlaces de Spotify.
+* 🔄 **Sensor de volteo con acelerómetro (`expo-sensors`):** Detecta la orientación física del teléfono (eje Z) para reproducir automáticamente sin intervención táctil ni filtración visual.
+* 🎵 **Reproducción Spotify sin API Keys:** Integra el Iframe Player API oficial de Spotify dentro de un `react-native-webview`, reproduciendo la vista previa de las canciones sin exponer credenciales ni requerir autenticación externa.
+* 🇨🇱 **Identidad visual chilena:** Paleta de colores patrios y diseño minimalista adaptado para partidas rápidas.
+
+---
+
+## 📁 Estructura del Repositorio
+
+```text
+hitster-app/
+├── cartas/                 # Información y plantillas de las cartas físicas imprimibles
+│   └── README.md
+├── assets/                 # Iconos, splash screen y recursos gráficos
+│   └── images/
+├── src/
+│   └── app/
+│       ├── _layout.tsx     # Configuración de rutas limpias (Expo Router)
+│       └── index.tsx       # Lógica central: cámara, acelerómetro, Spotify y UI
+├── app.json                # Configuración de Expo y metadatos de la aplicación
+├── package.json            # Dependencias del proyecto
+└── tsconfig.json           # Configuración de TypeScript
+```
+
+---
+
+## 🚀 Cómo ejecutar el proyecto localmente
+
+### Prerrequisitos
+* [Node.js](https://nodejs.org/) (versión 18 o superior).
+* La aplicación **Expo Go** instalada en tu teléfono móvil ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent) o [iOS](https://apps.apple.com/app/expo-go/id982107779)).
+
+### Instalación
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/Renvto21/chilster.git
+   cd chilster
+   ```
+
+2. **Instalar dependencias:**
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. **Iniciar la aplicación con Expo:**
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. **Abrir en tu dispositivo:**
+   * Escanea el código QR que aparece en tu terminal usando la cámara de tu teléfono (iOS) o la app **Expo Go** (Android).
+   * Asegúrate de que tu computador y tu teléfono estén conectados a la misma red Wi-Fi.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📦 Generación de APK (Opcional con EAS Build)
 
-## Get a fresh project
-
-When you're ready, run:
+El proyecto incluye la configuración en `eas.json` lista para compilar un archivo `.apk` para Android:
 
 ```bash
-npm run reset-project
+npm install -g eas-cli
+eas build -p android --profile preview
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-### Other setup steps
+## 🎴 Cartas Imprimibles
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Las cartas para imprimir y jugar físicamente están detalladas en la carpeta [`cartas/`](./cartas/README.md).
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 👨‍💻 Autor
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Creado por [Renato Arriagada](https://github.com/Renvto21).

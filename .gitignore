@@ -31,7 +31,19 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
 .env*.local
+.env.*
+
+# Editor and tools
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.claude/
+CLAUDE.md
+AGENTS.md
 
 # typescript
 *.tsbuildinfo
